@@ -1,0 +1,41 @@
+{
+  "file": {
+    "translated": "📁 File `{{file.path}}` fully translated into {{targetLanguage.name}}",
+    "approved": "📁 File `{{file.path}}` fully approved in {{targetLanguage.name}}",
+    "added": "📁 File `{{file.path}}` added by {{user.username}}",
+    "updated": "📁 File `{{file.path}}` updated by {{user.username}}",
+    "reverted": "📁 File `{{file.path}}` reverted by {{user.username}}",
+    "deleted": "📁 File `{{file.path}}` deleted by {{user.username}}"
+  },
+  "project": {
+    "translated": "🚀 Project fully translated into {{targetLanguage.name}}",
+    "approved": "🚀 Project fully approved in {{targetLanguage.name}}",
+    "built": "🚀 Project succesfully built\n- *Download link: {{build.downloadUrl}}*"
+  },
+  "translation": {
+    "updated": "📝 Exported translation updated by {{newTranslation.user.username}}\n- *{{newTranslation.string.identifier}}*"
+  },
+  "string": {
+    "added": "📝 String `{{string.stringIdentifier}}` added to source by {{user.username}}",
+    "updated": "📝 String `{{string.stringIdentifier}}` updated in source by {{user.username}}",
+    "deleted": "📝 String `{{string.stringIdentifier}}` deleted from source by {{user.username}}"
+  },
+  "suggestion": {
+    "added": "💭 Suggestion added in {{translation.targetLanguage.name}} by {{translation.user.username}}\n- *`{{translation.string.identifier}}:` {{translation.string.text}}*",
+    "updated": "💭 Suggestion updated in {{translation.targetLanguage.name}} by {{translation.user.username}}\n- *`{{translation.string.identifier}}:` {{translation.string.text}}*",
+    "deleted": "💭 Suggestion deleted in {{translation.targetLanguage.name}} by {{translation.user.username}}\n- *`{{translation.string.identifier}}:` {{translation.string.text}}*",
+    "approved": "💭 Suggestion approved in {{translation.targetLanguage.name}} by {{translation.user.username}}\n- *`{{translation.string.identifier}}:` {{translation.string.text}}*",
+    "disapproved": "💭 Suggestion disapproved in {{translation.targetLanguage.name}} by {{translation.user.username}}\n- *`{{translation.string.identifier}}:` {{translation.string.text}}*"
+  },
+  "stringComment": {
+    "created": "📨 {{user.username}} commented on `{{comment.string.identifier}}` ({{targetLanguage.name}}):\n- *{{comment.text}}*",
+    "updated": "📨 Comment in `{{comment.string.identifier}}` ({{targetLanguage.name}}) updated by {{user.username}}:\n- *{{comment.issueStatus}}*",
+    "deleted": "📨 Comment in `{{comment.string.identifier}}` ({{targetLanguage.name}}) deleted by {{user.username}}:\n- *{{comment.text}}*",
+    "restored": "📨 Comment in `{{comment.string.identifier}}` ({{targetLanguage.name}}) restored by {{user.username}}:\n- *{{comment.text}}*"
+  },
+  "task": {
+    "added": "📋 Task `{{task.taskTitle}}` added by {{task.taskCreator.username}}",
+    "statusChanged": "📋 Task `{{task.taskTitle}}` updated by {{task.taskCreator.username}}:\n- *{{task.oldStatus}} ➡️ {{task.newStatus}}*",
+    "deleted": "📋 Task `{{task.taskTitle}}` deleted by {{task.taskCreator.username}}"
+  }
+}

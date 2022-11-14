@@ -1,0 +1,27 @@
+{
+  "name": "crowdis",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GNosii/crowdis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GNosii/crowdis/issues"
+  },
+  "homepage": "https://github.com/GNosii/crowdis#readme",
+  "devDependencies": {
+    "husky": "^8.0.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "i18next": "^22.0.5"
+  }
+}
