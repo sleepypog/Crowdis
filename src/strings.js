@@ -1,27 +1,26 @@
-import strings from "./strings.json";
-import { init } from 'i18next';
+import i18next from 'i18next';
+import strings from './strings.json';
 
-/**
- * @type {import('i18next').TFunction}
- */
-let i18n;
-
-async function setupLanguage() {
-    i18n = await init({
-        lng: 'en',
-        resources: strings
-    }, (err, t) => {
-        if (err) 
-            console.error(err);
-        i18n = t;
-    });
+function setupLanguage() {
+    i18next.init({
+            lng: 'en',
+            fallbackLng: false,
+            nsSeparator: false,
+            resources: strings,
+            initImmediate: true,
+        });
 }
 
-function getSummary(event) {
-    return i18n(event.event, { event });
+function string(key, data) {
+    return i18next.t(key, data);
+}
+
+function normalize(array) {
+    return (array.join("\n")).trim();
 }
 
 export {
     setupLanguage,
-    getSummary
+    string,
+    normalize
 }
