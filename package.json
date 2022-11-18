@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode=production",
+    "dev": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/GNosii/crowdis#readme",
   "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
     "husky": "^8.0.2",
     "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0"
