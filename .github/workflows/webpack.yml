@@ -1,12 +1,14 @@
 name: Build
 
-on:
+on: 
+  workflow_dispatch:
   push:
     branches: [ "main" ]
     paths:
     - "src/**"
     - "**.json"
     - "**.toml"
+    - ".github/workflows/**"
 
 jobs:
   build:
