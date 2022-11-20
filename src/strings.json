@@ -36,9 +36,9 @@
         "restored": "📨 Comment in `{{comment.string.identifier}}` ({{comment.targetLanguage.name}}) restored by {{comment.user.username}}:\n- *{{comment.text}}*"
       },
       "task": {
-        "added": "📋 Task `{{task.taskTitle}}` added by {{task.taskCreator.username}}",
-        "statusChanged": "📋 Task `{{task.title}}` updated by {{task.taskCreator.username}}:\n- *{{task.oldStatus}} ➡️ {{task.newStatus}}*",
-        "deleted": "📋 Task `{{task.title}}` deleted by {{task.taskCreator.username}}"
+        "added": "📋 Task `{{task.title}}` added by {{task.creator.username}}",
+        "statusChanged": "📋 Task `{{task.title}}` updated by {{task.taskCreator.username}}:\n- ~~{{task.oldStatus}}~~ ➡️ {{task.newStatus}}*",
+        "deleted": "📋 Task `{{task.title}}` deleted by {{task.creator.username}}"
       },
       "webhook": {
         "header": "Updates from Crowdin"
