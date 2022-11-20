@@ -1,2 +1,2 @@
-name = "Crowdis"
+name = "crowdis"
 main = "dist/crowdis.js"
