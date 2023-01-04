@@ -1,6 +1,12 @@
 import i18next from 'i18next';
 import strings from './strings.json';
 
+const stringOptions = {
+    interpolation: {
+        escapeValue: false
+    }
+};
+
 function setupLanguage() {
     i18next.init({
             lng: 'en',
@@ -12,7 +18,7 @@ function setupLanguage() {
 }
 
 function string(key, data) {
-    return i18next.t(key, data);
+    return i18next.t(key, Object.assign(data, stringOptions));
 }
 
 function normalize(array) {
