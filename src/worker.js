@@ -2,7 +2,7 @@ import { normalize, setupLanguage, string } from "./strings";
 
 // Webhook avatar and username, displayed on Discord
 const WEBHOOK_USERNAME = "Crowdis";
-const WEBHOOK_AVATAR = "https://support.crowdin.com/assets/logos/crowdin-dark-symbol.png";
+const WEBHOOK_AVATAR = "https://support.crowdin.com/assets/logos/symbol/png/crowdin-symbol-cWhite.png";
 
 // Base webhook endpoint
 const WEBHOOK_BASE_URL = "https://discordapp.com/api/webhooks"
@@ -57,7 +57,7 @@ async function handleFetch(request) {
 
     const summaries = [];
     events.forEach((event) => {
-        summaries.push(string(event.event, event));
+        summaries.push('- ' + string(event.event, event));
     });
 
     let body;
@@ -66,7 +66,7 @@ async function handleFetch(request) {
         body = {
             embeds: [
                 {
-                    title: string('webhook.header'),
+                    title: string('webhook.header', { project: events[0].project }),
                     description: normalize(summaries),
                     url: null,
                     timestamp: new Date(Date.now()).toISOString(),
@@ -93,7 +93,7 @@ async function handleFetch(request) {
     } else {
         body = {
             "content": normalize([
-                string('webhook.header', { project: events[0].project }),
+                string('webhook.header', {}),
             ].concat(summaries))
         }
     }
