@@ -18,9 +18,9 @@
         "updated": "📝 Exported translation updated by **{{newTranslation.user.fullName}}**\n- `{{newTranslation.string.id}}`"
       },
       "string": {
-        "added": "📝 String `{{string.id}}` added to source by **{{user.fullName}}**",
-        "updated": "📝 String `{{string.id}}` updated in source by **{{user.fullName}}**",
-        "deleted": "📝 String `{{string.id}}` deleted from source by **{{user.fullName}}**"
+        "added": "📝 String `{{string.key}}` added to source by **{{user.fullName}}**",
+        "updated": "📝 String `{{string.key}}` updated in source by **{{user.fullName}}**",
+        "deleted": "📝 String `{{string.key}}` deleted from source by **{{user.fullName}}**"
       },
       "suggestion": {
         "added": "💭 Suggestion added in {{translation.targetLanguage.name}} by **{{translation.user.fullName}}**\n- *`{{translation.string.id}}:` {{translation.string.text}}*",
@@ -41,7 +41,7 @@
         "deleted": "📋 Task `{{task.title}}` deleted by **{{task.creator.username}}**"
       },
       "webhook": {
-        "header": "# Crowdin updates"
+        "header": "# Crowdin Activity Feed"
       }
     }
   }

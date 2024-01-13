@@ -45,6 +45,7 @@ async function handleFetch(request) {
     }
 
     const preferEmbed = searchParams.has('embed');
+    const testWebhook = searchParams.has('test');
 
     const data = await request.json();
 
@@ -57,6 +58,7 @@ async function handleFetch(request) {
 
     const summaries = [];
     events.forEach((event) => {
+        console.log(event);
         summaries.push('- ' + string(event.event, event));
     });
 
